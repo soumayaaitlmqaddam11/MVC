@@ -24,7 +24,7 @@
 
                 <ul class="sidebar_nav">
                     <li class="sidebar_item" style="width: 100%;">
-                        <a href="?route=dashboard" class="sidebar_link"> <img src="assets/img/1. overview.svg"
+                        <a href="?route=statistique" class="sidebar_link"> <img src="assets/img/1. overview.svg"
                                 alt="icon">Overview</a>
                     </li>
                     <li class="sidebar_item">
