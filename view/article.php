@@ -1,6 +1,4 @@
-<?php
-namespace App\Models\Job;
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -28,20 +26,20 @@ namespace App\Models\Job;
 
                 <ul class="sidebar_nav">
                     <li class="sidebar_item" style="width: 100%;">
-                        <a href="dashboard.php" class="sidebar_link"> <img src="assets/img/1. overview.svg"
+                        <a href="?route=statistique" class="sidebar_link"> <img src="assets/img/1. overview.svg"
                                 alt="icon">Overview</a>
                     </li>
                     <li class="sidebar_item">
-                        <a href="candidat.php" class="sidebar_link"> <img src="assets/img/agents.svg" alt="icon">Candidat</a>
+                        <a href="?route=condidat" class="sidebar_link"> <img src="assets/img/agents.svg" alt="icon">Candidat</a>
                     </li>
                     <li class="sidebar_item">
-                        <a href="offre.php" class="sidebar_link"> <img src="assets/img/task.svg" alt="icon">Offre</a>
+                        <a href="?route=offre"  class="sidebar_link"> <img src="assets/img/task.svg" alt="icon">Offre</a>
                     </li>
                     <li class="sidebar_item">
-                        <a href="contact.php" class="sidebar_link"><img src="assets/img/agent.svg" alt="icon">Contact</a>
+                        <a href="?route=contact" class="sidebar_link"><img src="assets/img/agent.svg" alt="icon">Contact</a>
                     </li>
                     <li class="sidebar_item active">
-                        <a href="article.php" class="sidebar_link"><img src="assets/img/articles.svg" alt="icon">Articles</a>
+                        <a href="?route=showAllArticles" class="sidebar_link"><img src="assets/img/articles.svg" alt="icon">Articles</a>
                     </li>
 
                 </ul>

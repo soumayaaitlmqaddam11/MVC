@@ -11,7 +11,7 @@ class ArticleController
         $conns = new Database();
         $conn=$conns->getConnection();
         // Initialise le modèle
-        $jobModel = new Job($conn);
+        $jobModel = new Job();
 
         // Récupère tous les articles
         $articles = $jobModel->getAllRows();
@@ -21,7 +21,5 @@ class ArticleController
     }
 }
 
-// Exemple d'utilisation
-$articleController = new ArticleController();
-$articleController->showAllArticles();
+
 ?>

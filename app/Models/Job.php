@@ -250,8 +250,27 @@ public function getJobId($id)
     }
     return $getalph;
 }
-}
 
+
+      public function getTotalJobs()
+    {
+       
+        $query = "SELECT COUNT(*) as total_jobs FROM jobs";
+        $stmt = $this->conn->prepare($query);
+
+        if ($stmt) {
+            $stmt->execute();
+            $result = $stmt->get_result();
+            if ($result) {
+                $data = $result->fetch_assoc();
+                return $data['total_jobs'];
+                
+            }
+        }
+
+        return 0;
+    }
+}
 
 ?>
 

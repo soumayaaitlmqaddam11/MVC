@@ -1,14 +1,23 @@
 <?php
+
+
 session_start();
 require_once  __DIR__  .'/../vendor/autoload.php';
 
 use App\Controllers\HomeController;
 use App\Controllers\LoginController;
+use App\Controllers\LogoutController;
 use App\Controllers\ArticleController;
 use App\Controllers\AddArticleController;
 use App\Controllers\EditArticleController;
 use App\Controllers\DeleteArticleController;
 use App\Controllers\SearchController;
+use App\Controllers\DashboardController;
+use App\Controllers\ContactController;
+use App\Controllers\OffreController;
+use App\Controllers\CondidatController;
+use App\Controllers\StatistiqueController;
+
 
 
 
@@ -17,17 +26,17 @@ $route = isset($_GET['route']) ? $_GET['route'] : 'home';
 // Instantiate the controller based on the route
 switch ($route) {
     case 'home':
-        $controller = new HomeController();
-        $controller->index();
-        break;
+            $controller = new HomeController();
+            $controller->index();
+            break;
     case 'fetchMoreUsers':
-        $controller = new HomeController();
-        $controller->fetchMoreUsers();
-        break;
+            $controller = new HomeController();
+            $controller->fetchMoreUsers();
+            break;
     case 'register':
-        $logincontroller = new LoginController();
-        $logincontroller->registerUrl();
-        break;
+            $logincontroller = new LoginController();
+            $logincontroller->registerUrl();
+            break;
     case 'login':
             $logincontroller = new LoginController();
             $logincontroller->login();
@@ -37,8 +46,8 @@ switch ($route) {
             $logincontroller->register();
             break;
     case 'logout':
-            $logincontroller = new LoginController();
-            $logincontroller->logout();
+            $logoutcontroller = new LogoutController();
+            $logoutcontroller->logout();
             break;
     case 'showAllArticles':
             $articlecontroller = new ArticleController();
@@ -57,9 +66,31 @@ switch ($route) {
             $deletearticlecontroller->DeleteArticleController();
             break;
     case 'search':
-        $searchcontroller = new SearchController();
-        $searchcontroller->search();
-        break;
+            $searchcontroller = new SearchController();
+            $searchcontroller->search();
+            break;
+    case 'dashboard':
+            $DashboardController = new DashboardController();
+            $DashboardController->index();
+            break;
+   case 'contact':
+             $ContactController = new ContactController();
+             $ContactController->contact();
+             break;
+   case 'offre':
+             $OffreController = new OffreController();
+             $OffreController->offre();
+             break; 
+   case 'condidat':
+             $CondidatController = new CondidatController();
+             $CondidatController->condidat();
+             break;  
+             
+             case 'statistique':
+                $statistiqueController = new StatistiqueController();
+                $statistiqueController->index();
+                break;  
+
 
             
     // Add more cases for other routes as needed    

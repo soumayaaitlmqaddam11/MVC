@@ -65,7 +65,7 @@
 						</span>
 						<li class="nav-item">
 							<?php if (isset($_SESSION['id'])) { ?>
-								<a class="nav-link" href="logout.php">Logout</a>
+								<a class="nav-link" href="?route=logout">Logout</a>
 							<?php } else { ?>
 								<a class="nav-link" href="?route=login">Login</a>
 							<?php } ?>

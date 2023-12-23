@@ -71,7 +71,7 @@
                 <button type="submit" class="btn btn-success btn-block mb-4 me-4 save">Save Edit</button>
                 <div class="col-sm-3">
                     <div class="d-grid">
-                        <a class="btn btn-outline-primary" href="article.php" role="button">Cancel</a>
+                        <a class="btn btn-outline-primary"  href="?route=showAllArticles" role="button">Cancel</a>
                     </div>
                 </div>
             </div>

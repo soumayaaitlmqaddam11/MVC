@@ -12,7 +12,7 @@ class DeleteArticleController
             $job_id = $_GET['id'];
             
             // Initialise le modèle
-            $jobModel = new Job($conn);
+            $jobModel = new Job();
 
             // Appeler la méthode pour supprimer l'article
             $result = $jobModel->deleteArticle($job_id);

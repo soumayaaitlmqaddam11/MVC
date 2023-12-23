@@ -30,13 +30,14 @@ class UserModel
     {
 
 
-       
+       session_start();
         $password = $_POST["password"];
         $email = $_POST["email"];
         $result = $this->db->getConnection()->query("SELECT * FROM users where email ='$email'");
         $row  = mysqli_num_rows($result) ;
         $user =mysqli_fetch_assoc($result);
         $hashedPassword =$user["password"];
+        $_SESSION['id'] = $user['id'];
         if ($row && password_verify($password, $hashedPassword)) {
                 if ($user['role_name'] == 'admin') {
                     header("location: index.php?route=showAllArticles");
